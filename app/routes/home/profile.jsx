@@ -21,10 +21,21 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Raman Vishwari, a Full-Stack MERN developer & SAP Consultant proudly based in Bhopal, MP, and an alumnus of LNCT. I specialize in building end-to-end web applications and enterprise solutions using React, Node.js, SAPUI5, and SAP Fiori. Being comfortable with both frontend and backend technologies allows me to rapidly prototype and deliver scalable solutions for local businesses and global enterprises.
+      Hi there! I'm Raman Vishwari, a creative MERN Full-Stack Developer, SAP Consultant, and tech entrepreneur proudly based in Bhopal, MP. As an MCA scholar at LNCT Bhopal, I specialize in engineering highly performant digital ecosystems—bridging the gap between cutting-edge immersive frontend designs and robust enterprise systems.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to learn new technologies and build projects like Ziaftra AI and PromptPlease. I’m always down for hearing about new projects, so if you're looking for a web developer in Bhopal or need SAP consulting, feel free to drop me a line.
+      My expertise spans interactive 3D web animations using Three.js, WebGL, and GSAP, cross-platform mobile apps with React Native, and scalable architecture built on solid System Design principles. On the enterprise side, I develop scalable solutions utilizing the SAP Full-Stack (SAP UI5, SAP Fiori, SAP ABAP, and SAP BTP).
+    </Text>
+    
+    <Heading className={styles.title} data-visible={visible} level={4} style={{ marginTop: '40px', marginBottom: '16px' }}>
+      Cross-Platform Mobile Engineering & System Design
+    </Text>
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      I engineer high-performance, cross-platform mobile applications using React Native, ensuring a native-level experience across iOS and Android platforms. Moving beyond basic layouts, my app development methodology centers around scalable System Design principles—implementing strict state management architectures, offline-first synchronization, and optimized REST/GraphQL data fetching layers. By utilizing native bridges and custom performance tuning, I build fluid mobile products that seamlessly interact with backend MERN microservices and enterprise cloud ecosystems.
+    </Text>
+
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      Driven by a passion for building product-first companies, I am the Founder of Ziaftra.in (a hyper-focused design and custom development studio), the creator of Rahiway.online, and the Co-founder of PromptPlease.in. Whether you are looking for an immersive Web3/3D platform or a cloud-ready enterprise integration, let’s build something incredible.
     </Text>
   </Fragment>
 );

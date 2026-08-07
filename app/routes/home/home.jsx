@@ -36,13 +36,17 @@ export const links = () => {
 export const meta = () => {
   return [
     ...baseMeta({
-      title: 'Best Web Developer in Bhopal | SAP Fiori & MERN Stack',
-      description: `Portfolio of Raman Vishwari — Top web developer and designer in Bhopal, MP. Founder of Rahiway & Ziaftra AI, Co-founder of Promptplease. Expert in MERN stack, SAP ABAP & Fiori.`,
+      title: 'Raman Vishwari | Creative MERN Full Stack, Three.js & SAP Developer Bhopal',
+      description: 'Portfolio of Raman Vishwari: Founder of Ziaftra.in & Rahiway.online, Co-founder of PromptPlease.in. MCA student at LNCT Bhopal specializing in MERN Stack, Three.js 3D animation, GSAP, React Native, and SAP (UI5, ABAP, BTP).',
     }),
     {
       name: 'keywords',
-      content: 'Raman Vishwari, Rahiway, Ziaftra AI, Ziafra dev, Promptplease, LNCT, Bhopal, MP, india, web designer, Sap fiori, sap abap, sap dev, MERN full stack, website banna bala bhopal me, chhatarpur, khajuraho best web dev'
-    }
+      content: 'Raman Vishwari, Ziaftra founder, PromptPlease co-founder, Rahiway online, MERN stack developer Bhopal, Three.js developer India, GSAP animation expert, SAP UI5 consultant, LNCT Bhopal MCA, System Design engineer'
+    },
+    { property: 'og:title', content: 'Raman Vishwari | MERN Full Stack, SAP Developer & Founder' },
+    { property: 'og:description', content: 'Explore advanced 3D web animation, mobile apps, and enterprise solutions built by Raman Vishwari. Founder of Ziaftra, Rahiway, and Prompt Please.' },
+    { property: 'og:type', content: 'profile' },
+    { property: 'og:url', content: 'https://ramanvishwari.ziaftra.in/' }
   ];
 };
 
@@ -108,6 +112,7 @@ export const Home = () => {
         description="An AI-first digital agency providing modern web development (MERN stack) and automation solutions."
         buttonText="View website"
         buttonLink="https://ziaftra.in/"
+        buttonTitle="Ziaftra Web Development Studio Bhopal"
         model={{
           type: 'laptop',
           alt: 'Ziaftra website on laptop',
@@ -129,6 +134,7 @@ export const Home = () => {
         description="Startup project focusing on innovative digital solutions"
         buttonText="View website"
         buttonLink="https://rahiway.online"
+        buttonTitle="Rahiway Online Digital Solutions"
         model={{
           type: 'phone',
           alt: 'Rahiway on mobile',
@@ -153,6 +159,7 @@ export const Home = () => {
         description="An AI prompt engineering platform to help users maximize the potential of LLMs."
         buttonText="View website"
         buttonLink="https://promptplease.in/"
+        buttonTitle="PromptPlease AI Platform"
         model={{
           type: 'laptop',
           alt: 'Prompt Please website',

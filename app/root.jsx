@@ -100,29 +100,42 @@ export default function App() {
     "@type": "Person",
     "name": "Raman Vishwari",
     "url": "https://ramanvishwari.ziaftra.in",
-    "jobTitle": ["Founder", "Co-founder", "Developer", "Designer"],
+    "jobTitle": "Full-Stack Developer, SAP Consultant & Tech Entrepreneur",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bhopal",
       "addressCountry": "India"
     },
-    "worksFor": [
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Lakshmi Narain College of Technology (LNCT), Bhopal"
+    },
+    "knowsAbout": [
+      "MERN Stack",
+      "React Native",
+      "Three.js",
+      "GSAP",
+      "SAP UI5",
+      "SAP Fiori",
+      "SAP ABAP",
+      "SAP BTP",
+      "System Design",
+      "Web3"
+    ],
+    "founderOf": [
       {
         "@type": "Organization",
-        "name": "rahiway.online",
-        "roleName": "Founder",
-        "url": "https://rahiway.online"
-      },
-      {
-        "@type": "Organization",
-        "name": "ziaftra.in",
-        "roleName": "Founder",
+        "name": "Ziaftra",
         "url": "https://ziaftra.in"
       },
       {
         "@type": "Organization",
-        "name": "promptplease.in",
-        "roleName": "Co-founder",
+        "name": "Rahiway",
+        "url": "https://rahiway.online"
+      },
+      {
+        "@type": "Organization",
+        "name": "Prompt Please",
         "url": "https://promptplease.in"
       }
     ],
