@@ -3,19 +3,18 @@ import { Resend } from 'resend';
 export async function sendContactEmail({ email, message }) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
-  // 1. Email notification to you (This works with onboarding@resend.dev)
+  // 1. Email notification to you
   await resend.emails.send({
-    from: 'onboarding@resend.dev',
+    from: 'hello@ziaftra.in',
     to: 'ramanvishwari@gmail.com',
     subject: `New contact form message from ${email}`,
     html: `<p>You received a new message from <strong>${email}</strong>.</p><br/><p><strong>Message:</strong></p><p>${message}</p>`,
   });
 
   // 2. Auto-response email to the sender 
-  // (This will fail with onboarding@resend.dev unless the sender email is also ramanvishwari@gmail.com)
   try {
     await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'hello@ziaftra.in',
       to: email,
       subject: 'Thank you for reaching out!',
       html: `
