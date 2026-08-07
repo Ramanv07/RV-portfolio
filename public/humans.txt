@@ -1,0 +1,41 @@
+ ___  __  __
+|  _ \ \ \/ /
+| |_) | \  / 
+|  _ <  /  \ 
+|_| \_\/_/\_\
+
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+
+_______________________________________________________________________________
+
+DEVELOPER | डेवलपर
+
+Raman Vishwari
+MERN full stack developer & SAP Full stack developer
+
+Design & Dev tools:
+Git
+Vercel
+Railway
+Render
+
+github.com/
+
+
+_______________________________________________________________________________
+
+TECHNOLOGY | テクノロジー
+
+React
+Remix
+Three.js
+Framer Motion
+
+_______________________________________________________________________________
+
+FONTS | フォント
+
+Gotham
+IPA Gothic Regular
+Hiragino Kaku Gothic W8
