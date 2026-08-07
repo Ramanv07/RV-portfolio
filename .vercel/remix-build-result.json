@@ -1,0 +1,159 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs-eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "routes/api.set-theme": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/services": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/contact": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/home": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/uses": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/$": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/home/route": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "app/root.jsx",
+        "config": {}
+      },
+      "routes/api.set-theme": {
+        "file": "app/routes/api.set-theme.js",
+        "id": "routes/api.set-theme",
+        "path": "api/set-theme",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/services": {
+        "file": "app/routes/services/route.jsx",
+        "id": "routes/services",
+        "path": "services",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/contact": {
+        "file": "app/routes/contact/route.js",
+        "id": "routes/contact",
+        "path": "contact",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/home": {
+        "file": "app/routes/home/route.js",
+        "id": "routes/home",
+        "path": "home",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/uses": {
+        "file": "app/routes/uses/route.js",
+        "id": "routes/uses",
+        "path": "uses",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/$": {
+        "file": "app/routes/$.jsx",
+        "id": "routes/$",
+        "path": "*",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/home/route": {
+        "path": "/",
+        "index": true,
+        "id": "routes/home/route",
+        "parentId": "root",
+        "file": "app/routes/home/route.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    }
+  },
+  "remixConfig": {
+    "appDirectory": "C:\\Users\\raman\\Downloads\\portfolio\\app",
+    "basename": "/",
+    "buildDirectory": "C:\\Users\\raman\\Downloads\\portfolio\\build",
+    "future": {
+      "v3_fetcherPersist": false,
+      "v3_relativeSplatPath": false,
+      "v3_throwAbortReason": false
+    },
+    "manifest": false,
+    "publicPath": "/",
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "root.jsx"
+      },
+      "routes/api.set-theme": {
+        "file": "routes/api.set-theme.js",
+        "id": "routes/api.set-theme",
+        "path": "api/set-theme",
+        "parentId": "root"
+      },
+      "routes/services": {
+        "file": "routes/services/route.jsx",
+        "id": "routes/services",
+        "path": "services",
+        "parentId": "root"
+      },
+      "routes/contact": {
+        "file": "routes/contact/route.js",
+        "id": "routes/contact",
+        "path": "contact",
+        "parentId": "root"
+      },
+      "routes/home": {
+        "file": "routes/home/route.js",
+        "id": "routes/home",
+        "path": "home",
+        "parentId": "root"
+      },
+      "routes/uses": {
+        "file": "routes/uses/route.js",
+        "id": "routes/uses",
+        "path": "uses",
+        "parentId": "root"
+      },
+      "routes/$": {
+        "file": "routes/$.jsx",
+        "id": "routes/$",
+        "path": "*",
+        "parentId": "root"
+      },
+      "routes/home/route": {
+        "path": "/",
+        "index": true,
+        "id": "routes/home/route",
+        "parentId": "root",
+        "file": "routes/home/route.js"
+      }
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true
+  }
+}
