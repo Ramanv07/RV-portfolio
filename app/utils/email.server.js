@@ -2,7 +2,7 @@ import { Resend } from 'resend';
 
 export async function sendContactEmail({ email, message }) {
   const resend = new Resend(process.env.RESEND_API_KEY);
-  
+
   // 1. Email notification to you (This works with onboarding@resend.dev)
   await resend.emails.send({
     from: 'onboarding@resend.dev',
@@ -47,10 +47,7 @@ export async function sendContactEmail({ email, message }) {
         I've received your message and will review it shortly. You can expect a response from me within the next 24 hours.
       </p>
       
-      <div style="background-color: #18181b; padding: 16px; border-radius: 8px; margin-bottom: 40px; border: 1px solid #27272a;">
-        <p style="font-size: 14px; color: #a1a1aa; margin: 0 0 8px 0;">For your records, here is a copy of your message:</p>
-        <p style="font-size: 15px; color: #e4e4e7; line-height: 1.6; margin: 0;">\${message}</p>
-      </div>
+    
 
       <!-- Divider Line -->
       <hr style="border: 0; border-top: 1px solid #27272a; margin: 0 0 32px 0;" />
