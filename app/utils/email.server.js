@@ -46,9 +46,6 @@ export async function sendContactEmail({ email, message }) {
       <p style="font-size: 15px; color: #a1a1aa; line-height: 1.6; margin: 0 0 24px 0;">
         I've received your message and will review it shortly. You can expect a response from me within the next 24 hours.
       </p>
-      
-    
-
       <!-- Divider Line -->
       <hr style="border: 0; border-top: 1px solid #27272a; margin: 0 0 32px 0;" />
 
