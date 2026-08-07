@@ -21,10 +21,10 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Raman Vishwari, a MERN full stack developer & SAP Full stack developer. I specialize in building end-to-end web applications and enterprise solutions using React, Node.js, SAPUI5, and SAP Fiori. Being comfortable with both frontend and backend technologies allows me to rapidly prototype and deliver scalable solutions.
+      I’m Raman Vishwari, a Full-Stack MERN developer & SAP Consultant proudly based in Bhopal, MP, and an alumnus of LNCT. I specialize in building end-to-end web applications and enterprise solutions using React, Node.js, SAPUI5, and SAP Fiori. Being comfortable with both frontend and backend technologies allows me to rapidly prototype and deliver scalable solutions for local businesses and global enterprises.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to learn new technologies and work on side projects. I’m always down for hearing about new projects, so feel free to drop me a line.
+      In my spare time I like to learn new technologies and build projects like Ziaftra AI and PromptPlease. I’m always down for hearing about new projects, so if you're looking for a web developer in Bhopal or need SAP consulting, feel free to drop me a line.
     </Text>
   </Fragment>
 );

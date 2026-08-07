@@ -34,10 +34,16 @@ export const links = () => {
 };
 
 export const meta = () => {
-  return baseMeta({
-    title: 'Designer + Developer',
-    description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
-  });
+  return [
+    ...baseMeta({
+      title: 'Best Web Developer in Bhopal | SAP Fiori & MERN Stack',
+      description: `Portfolio of Raman Vishwari — Top web developer and designer in Bhopal, MP. Founder of Rahiway & Ziaftra AI, Co-founder of Promptplease. Expert in MERN stack, SAP ABAP & Fiori.`,
+    }),
+    {
+      name: 'keywords',
+      content: 'Raman Vishwari, Rahiway, Ziaftra AI, Ziafra dev, Promptplease, LNCT, Bhopal, MP, india, web designer, Sap fiori, sap abap, sap dev, MERN full stack, website banna bala bhopal me, chhatarpur, khajuraho best web dev'
+    }
+  ];
 };
 
 export const Home = () => {
@@ -99,7 +105,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="Ziaftra"
-        description="Digital agency providing web development services (Co-founder)"
+        description="An AI-first digital agency providing modern web development (MERN stack) and automation solutions."
         buttonText="View website"
         buttonLink="https://ziaftra.in/"
         model={{
@@ -144,7 +150,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectThree.current)}
         index={3}
         title="Prompt Please"
-        description="Platform for prompts where I am a co-founder"
+        description="An AI prompt engineering platform to help users maximize the potential of LLMs."
         buttonText="View website"
         buttonLink="https://promptplease.in/"
         model={{

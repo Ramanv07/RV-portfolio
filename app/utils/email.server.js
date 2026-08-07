@@ -30,7 +30,7 @@ export async function sendContactEmail({ email, message }) {
     <div style="max-width: 480px; margin: 0 auto; padding: 80px 20px;">
       <!-- YAHAN APNA LOGO ADD KAREIN -->
       <img
-        src="https://ramanvishwari.vercel.app/favicon.ico"
+        src="https://ramanvishwari.ziaftra.in/favicon.ico"
         alt="Raman Vishwari"
         width="48"
         height="48"
@@ -56,7 +56,7 @@ export async function sendContactEmail({ email, message }) {
         <p
           style="font-size: 12px; color: #52525b; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; margin: 0;"
         >
-          <a href="https://ramanvishwari.vercel.app" style="color: #a1a1aa; text-decoration: none;">portfolio</a>
+          <a href="https://ramanvishwari.ziaftra.in" style="color: #a1a1aa; text-decoration: none;">portfolio</a>
           <span style="margin: 0 8px;">|</span>
           <a href="https://github.com/ramanv07" style="color: #a1a1aa; text-decoration: none;">github</a>
           <span style="margin: 0 8px;">|</span>
