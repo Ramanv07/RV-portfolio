@@ -1,8 +1,8 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function sendContactEmail({ email, message }) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  
   await Promise.all([
     // 1. Email notification to you
     resend.emails.send({
