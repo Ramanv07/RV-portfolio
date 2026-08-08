@@ -29,7 +29,7 @@ const ProfileText = ({ visible, titleId }) => (
     
     <Heading className={styles.title} data-visible={visible} level={4} style={{ marginTop: '40px', marginBottom: '16px' }}>
       Cross-Platform Mobile Engineering & System Design
-    </Text>
+    </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I engineer high-performance, cross-platform mobile applications using React Native, ensuring a native-level experience across iOS and Android platforms. Moving beyond basic layouts, my app development methodology centers around scalable System Design principles—implementing strict state management architectures, offline-first synchronization, and optimized REST/GraphQL data fetching layers. By utilizing native bridges and custom performance tuning, I build fluid mobile products that seamlessly interact with backend MERN microservices and enterprise cloud ecosystems.
     </Text>
