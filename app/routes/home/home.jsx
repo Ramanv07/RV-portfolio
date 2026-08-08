@@ -36,15 +36,15 @@ export const links = () => {
 export const meta = () => {
   return [
     ...baseMeta({
-      title: 'Raman Vishwari | Creative MERN Full Stack, Three.js & SAP Developer Bhopal',
-      description: 'Portfolio of Raman Vishwari: Founder of Ziaftra.in & Rahiway.online, Co-founder of PromptPlease.in. MCA student at LNCT Bhopal specializing in MERN Stack, Three.js 3D animation, GSAP, React Native, and SAP (UI5, ABAP, BTP).',
+      title: 'Raman Vishwari | Portfolio',
+      description: 'Portfolio of Raman Vishwari: Founder of Ziaftra.in & Rahiway.online, Co-founder of PromptPlease.in. MCA student at LNCT Bhopal specializing in MERN Stack, Three.js 3D animation, GSAP, and React Native.',
     }),
     {
       name: 'keywords',
-      content: 'Raman Vishwari, Ziaftra founder, PromptPlease co-founder, Rahiway online, MERN stack developer Bhopal, Three.js developer India, GSAP animation expert, SAP UI5 consultant, LNCT Bhopal MCA, System Design engineer'
+      content: 'Raman Vishwari, Ziaftra founder, PromptPlease co-founder, Rahiway online, MERN stack developer, web developer, best web service provider, website banne bala, web designer, LNCT Bhopal MCA, MCBU, Chhatarpur MP, Khajuraho MP, Bhopal MP, Indore, Gwalior, Pune, Delhi, Panna MP, Nowgong MP, pan-India web developer, Three.js developer, GSAP animation expert, System Design engineer'
     },
-    { property: 'og:title', content: 'Raman Vishwari | MERN Full Stack, SAP Developer & Founder' },
-    { property: 'og:description', content: 'Explore advanced 3D web animation, mobile apps, and enterprise solutions built by Raman Vishwari. Founder of Ziaftra, Rahiway, and Prompt Please.' },
+    { property: 'og:title', content: 'Raman Vishwari | MERN Full Stack Developer & Founder' },
+    { property: 'og:description', content: 'Explore advanced 3D web animation, mobile apps, and full-stack solutions built by Raman Vishwari. Founder of Ziaftra, Rahiway, and Prompt Please.' },
     { property: 'og:type', content: 'profile' },
     { property: 'og:url', content: 'https://ramanvishwari.ziaftra.in/' }
   ];
