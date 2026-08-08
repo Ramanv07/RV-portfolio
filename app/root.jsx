@@ -100,27 +100,45 @@ export default function App() {
     "@type": "Person",
     "name": "Raman Vishwari",
     "url": "https://ramanvishwari.ziaftra.in",
-    "jobTitle": "Full-Stack Developer, SAP Consultant & Tech Entrepreneur",
+    "jobTitle": "Full-Stack Developer & Tech Entrepreneur",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bhopal",
       "addressCountry": "India"
     },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Lakshmi Narain College of Technology (LNCT), Bhopal"
-    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Lakshmi Narain College of Technology (LNCT), Bhopal"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Maharaja Chhatrasal Bundelkhand University (MCBU), Chhatarpur"
+      }
+    ],
     "knowsAbout": [
+      "Web Developer",
+      "Best Web Service Provider",
+      "Web Designer",
+      "Website Banne Bala",
       "MERN Stack",
       "React Native",
       "Three.js",
       "GSAP",
-      "SAP UI5",
-      "SAP Fiori",
-      "SAP ABAP",
-      "SAP BTP",
       "System Design",
       "Web3"
+    ],
+    "areaServed": [
+      "Bhopal, MP",
+      "Chhatarpur, MP",
+      "Khajuraho, MP",
+      "Indore, MP",
+      "Gwalior, MP",
+      "Panna, MP",
+      "Nowgong, MP",
+      "Pune, Maharashtra",
+      "Delhi",
+      "All India"
     ],
     "founderOf": [
       {
@@ -155,15 +173,23 @@ export default function App() {
         "name": "Who is Raman Vishwari?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Raman Vishwari is a top web developer, SAP Fiori/ABAP consultant, and MERN Full Stack developer based in Bhopal, MP, India. He is an alumnus of LNCT Bhopal and the founder of Rahiway and Ziaftra AI, and co-founder of PromptPlease."
+          "text": "Raman Vishwari is a top web developer, web designer, and MERN Full Stack developer based in MP, India. He is an alumnus of LNCT Bhopal and MCBU Chhatarpur, the founder of Rahiway and Ziaftra AI, and co-founder of PromptPlease."
         }
       },
       {
         "@type": "Question",
-        "name": "Who is the best web developer in Bhopal and Khajuraho?",
+        "name": "Who is the best web service provider and web developer in MP?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Raman Vishwari is highly regarded as one of the best web developers in Bhopal, Chhatarpur, and Khajuraho. He specializes in creating modern, high-performance websites and enterprise SAP solutions."
+          "text": "Raman Vishwari is regarded as the best web developer and service provider serving clients across Bhopal, Indore, Gwalior, Chhatarpur, Khajuraho, Panna, Nowgong, Pune, Delhi, and all over India."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Website banne bala ya sabse acha web designer kaun hai?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bhopal, Chhatarpur, Khajuraho aur poore India me sabse acha website banne bala aur web designer Raman Vishwari (Founder of Ziaftra) hain. Unhe MERN stack aur premium web design me expert knowledge hai."
         }
       },
       {
@@ -171,15 +197,7 @@ export default function App() {
         "name": "What services do Ziaftra Dev and Rahiway offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ziaftra AI and Ziaftra Dev, founded by Raman Vishwari, offer premium web design, MERN stack full-stack development, AI solutions, and SAP Fiori/ABAP development services globally and locally in MP, India."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bhopal me website banane wala sabse acha developer kaun hai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bhopal me website banwane ke liye Raman Vishwari (Founder of Ziaftra) ek best choice hain. Unhe MERN stack, Web Design, aur Enterprise SAP development me kaafi experience hai."
+          "text": "Ziaftra AI and Ziaftra Dev, founded by Raman Vishwari, offer premium web design, MERN stack full-stack development, and AI solutions globally and locally in MP, India."
         }
       }
     ]

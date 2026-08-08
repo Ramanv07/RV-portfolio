@@ -5,47 +5,37 @@ import { delay } from '~/utils/delay';
 import { classes } from '~/utils/style';
 import styles from './decoder-text.module.css';
 
-// prettier-ignore
-const glyphs = [
-  'ア', 'イ', 'ウ', 'エ', 'オ',
-  'カ', 'キ', 'ク', 'ケ', 'コ',
-  'サ', 'シ', 'ス', 'セ', 'ソ',
-  'タ', 'チ', 'ツ', 'テ', 'ト',
-  'ナ', 'ニ', 'ヌ', 'ネ', 'ノ',
-  'ハ', 'ヒ', 'フ', 'ヘ', 'ホ',
-  'マ', 'ミ', 'ム', 'メ', 'モ',
-  'ヤ', 'ユ', 'ヨ', 'ー',
-  'ラ', 'リ', 'ル', 'レ', 'ロ',
-  'ワ', 'ヰ', 'ヱ', 'ヲ', 'ン',
-  'ガ', 'ギ', 'グ', 'ゲ', 'ゴ',
-  'ザ', 'ジ', 'ズ', 'ゼ', 'ゾ',
-  'ダ', 'ヂ', 'ヅ', 'デ', 'ド',
-  'バ', 'ビ', 'ブ', 'ベ', 'ボ',
-  'パ', 'ピ', 'プ', 'ペ', 'ポ',
-];
+const hindiMap = {
+  a: 'अ', b: 'ब', c: 'च', d: 'द', e: 'इ', f: 'फ', g: 'ग', h: 'ह',
+  i: 'इ', j: 'ज', k: 'क', l: 'ल', m: 'म', n: 'न', o: 'ओ', p: 'प',
+  q: 'क', r: 'र', s: 'स', t: 'त', u: 'उ', v: 'व', w: 'व', x: 'क्ष',
+  y: 'य', z: 'ज़', ' ': ' '
+};
 
 const CharType = {
   Glyph: 'glyph',
   Value: 'value',
 };
 
-function shuffle(content, output, position) {
-  return content.map((value, index) => {
-    if (index < position) {
-      return { type: CharType.Value, value };
+function shuffle(content, position, startText) {
+  const result = [];
+  const maxLen = Math.max(content.length, startText.length);
+  for (let i = 0; i < maxLen; i++) {
+    if (i < position) {
+      if (i < content.length) {
+        result.push({ type: CharType.Value, value: content[i] });
+      }
+    } else {
+      if (i < startText.length) {
+        result.push({ type: CharType.Glyph, value: startText[i] });
+      }
     }
-
-    if (position % 1 < 0.5) {
-      const rand = Math.floor(Math.random() * glyphs.length);
-      return { type: CharType.Glyph, value: glyphs[rand] };
-    }
-
-    return { type: CharType.Glyph, value: output[index].value };
-  });
+  }
+  return result;
 }
 
 export const DecoderText = memo(
-  ({ text, start = true, delay: startDelay = 0, className, ...rest }) => {
+  ({ text, startText, start = true, delay: startDelay = 0, className, ...rest }) => {
     const output = useRef([{ type: CharType.Glyph, value: '' }]);
     const container = useRef();
     const reduceMotion = useReducedMotion();
@@ -54,6 +44,14 @@ export const DecoderText = memo(
     useEffect(() => {
       const containerInstance = container.current;
       const content = text.split('');
+      
+      // Auto-generate startText from hindiMap if not provided
+      const actualStartText = startText 
+        ? startText.split('') 
+        : content.map(char => hindiMap[char.toLowerCase()] || char);
+        
+      const maxLen = Math.max(content.length, actualStartText.length);
+
       let animation;
 
       const renderOutput = () => {
@@ -65,13 +63,13 @@ export const DecoderText = memo(
       };
 
       const unsubscribeSpring = decoderSpring.on('change', value => {
-        output.current = shuffle(content, output.current, value);
+        output.current = shuffle(content, value, actualStartText);
         renderOutput();
       });
 
       const startSpring = async () => {
         await delay(startDelay);
-        decoderSpring.set(content.length);
+        decoderSpring.set(maxLen);
       };
 
       if (start && !animation && !reduceMotion) {
@@ -89,7 +87,7 @@ export const DecoderText = memo(
       return () => {
         unsubscribeSpring?.();
       };
-    }, [decoderSpring, reduceMotion, start, startDelay, text]);
+    }, [decoderSpring, reduceMotion, start, startDelay, text, startText]);
 
     return (
       <span className={classes(styles.text, className)} {...rest}>
