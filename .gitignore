@@ -5,7 +5,8 @@ node_modules
 .env
 
 .wrangler
-.dev.vars
 
-public/draco
 storybook-static
+
+seo_execution_report.md
+seo-prompts.md
