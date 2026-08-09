@@ -106,7 +106,7 @@ export const Services = () => {
     <div className={styles.services}>
       <Section className={styles.hero}>
         <Heading as="h1" level={2} className={styles.heroTitle}>
-          <DecoderText text="We don't build websites." />
+          <DecoderText text="We don't build websites." startText="हम वेबसाइट्स नहीं बनाते।" />
         </Heading>
         <Text className={styles.heroSubtitle}>
           We build digital unfair advantages.<br />
