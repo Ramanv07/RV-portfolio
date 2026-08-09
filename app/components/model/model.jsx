@@ -91,17 +91,22 @@ export const Model = ({
   useEffect(() => {
     const { clientWidth, clientHeight } = container.current;
 
-    renderer.current = new WebGLRenderer({
-      canvas: canvas.current,
-      alpha: true,
-      antialias: false,
-      powerPreference: 'high-performance',
-      failIfMajorPerformanceCaveat: true,
-    });
+    try {
+      renderer.current = new WebGLRenderer({
+        canvas: canvas.current,
+        alpha: true,
+        antialias: false,
+        powerPreference: 'high-performance',
+        failIfMajorPerformanceCaveat: true,
+      });
 
-    renderer.current.setPixelRatio(2);
-    renderer.current.setSize(clientWidth, clientHeight);
-    renderer.current.outputColorSpace = SRGBColorSpace;
+      renderer.current.setPixelRatio(2);
+      renderer.current.setSize(clientWidth, clientHeight);
+      renderer.current.outputColorSpace = SRGBColorSpace;
+    } catch (error) {
+      console.error('WebGLRenderer could not be initialized', error);
+      return;
+    }
 
     camera.current = new PerspectiveCamera(36, clientWidth / clientHeight, 0.1, 100);
     camera.current.position.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
@@ -215,7 +220,9 @@ export const Model = ({
       renderTargetBlur.current.dispose();
       removeLights(lights.current);
       cleanScene(scene.current);
-      cleanRenderer(renderer.current);
+      if (renderer.current) {
+        cleanRenderer(renderer.current);
+      }
       unsubscribeX();
       unsubscribeY();
     };
@@ -223,6 +230,7 @@ export const Model = ({
   }, []);
 
   const blurShadow = useCallback(amount => {
+    if (!renderer.current) return;
     blurPlane.current.visible = true;
 
     // Blur horizontally and draw in the renderTargetBlur
@@ -246,6 +254,7 @@ export const Model = ({
 
   // Handle render passes for a single frame
   const renderFrame = useCallback(() => {
+    if (!renderer.current) return;
     const blurAmount = 5;
 
     // Remove the background
@@ -305,7 +314,7 @@ export const Model = ({
   // Handle window resize
   useEffect(() => {
     const handleResize = () => {
-      if (!container.current) return;
+      if (!container.current || !renderer.current) return;
 
       const { clientWidth, clientHeight } = container.current;
 
@@ -370,6 +379,7 @@ const Device = ({
 
   useEffect(() => {
     const applyScreenTexture = async (texture, node) => {
+      if (!renderer.current) return;
       texture.colorSpace = SRGBColorSpace;
       texture.flipY = false;
       texture.anisotropy = renderer.current.capabilities.getMaxAnisotropy();

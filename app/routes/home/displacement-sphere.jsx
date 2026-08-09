@@ -51,16 +51,21 @@ export const DisplacementSphere = props => {
   useEffect(() => {
     const { innerWidth, innerHeight } = window;
     mouse.current = new Vector2(0.8, 0.5);
-    renderer.current = new WebGLRenderer({
-      canvas: canvasRef.current,
-      antialias: false,
-      alpha: true,
-      powerPreference: 'high-performance',
-      failIfMajorPerformanceCaveat: true,
-    });
-    renderer.current.setSize(innerWidth, innerHeight);
-    renderer.current.setPixelRatio(1);
-    renderer.current.outputColorSpace = LinearSRGBColorSpace;
+    try {
+      renderer.current = new WebGLRenderer({
+        canvas: canvasRef.current,
+        antialias: false,
+        alpha: true,
+        powerPreference: 'high-performance',
+        failIfMajorPerformanceCaveat: true,
+      });
+      renderer.current.setSize(innerWidth, innerHeight);
+      renderer.current.setPixelRatio(1);
+      renderer.current.outputColorSpace = LinearSRGBColorSpace;
+    } catch (error) {
+      console.error('WebGLRenderer could not be initialized', error);
+      return;
+    }
 
     camera.current = new PerspectiveCamera(54, innerWidth / innerHeight, 0.1, 100);
     camera.current.position.z = 52;
@@ -89,7 +94,9 @@ export const DisplacementSphere = props => {
 
     return () => {
       cleanScene(scene.current);
-      cleanRenderer(renderer.current);
+      if (renderer.current) {
+        cleanRenderer(renderer.current);
+      }
     };
   }, []);
 
@@ -111,6 +118,7 @@ export const DisplacementSphere = props => {
 
   useEffect(() => {
     const { width, height } = windowSize;
+    if (!renderer.current) return;
 
     const adjustedHeight = height + height * 0.3;
     renderer.current.setSize(width, adjustedHeight);
@@ -156,6 +164,7 @@ export const DisplacementSphere = props => {
 
   useEffect(() => {
     let animation;
+    if (!renderer.current) return;
 
     const animate = () => {
       animation = requestAnimationFrame(animate);

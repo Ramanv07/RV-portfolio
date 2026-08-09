@@ -67,13 +67,18 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
 
   useEffect(() => {
     const cameraOptions = [width / -2, width / 2, height / 2, height / -2, 1, 1000];
-    renderer.current = new WebGLRenderer({
-      canvas: canvas.current,
-      antialias: false,
-      alpha: true,
-      powerPreference: 'high-performance',
-      failIfMajorPerformanceCaveat: true,
-    });
+    try {
+      renderer.current = new WebGLRenderer({
+        canvas: canvas.current,
+        antialias: false,
+        alpha: true,
+        powerPreference: 'high-performance',
+        failIfMajorPerformanceCaveat: true,
+      });
+    } catch (error) {
+      console.error('WebGLRenderer could not be initialized', error);
+      return;
+    }
     camera.current = new OrthographicCamera(...cameraOptions);
     scene.current = new Scene();
     renderer.current.setPixelRatio(2);
@@ -87,7 +92,9 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
     return () => {
       animating.current = false;
       cleanScene(scene.current);
-      cleanRenderer(renderer.current);
+      if (renderer.current) {
+        cleanRenderer(renderer.current);
+      }
     };
   }, [height, width]);
 
@@ -95,6 +102,7 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
     let mounted = true;
 
     const loadImages = async () => {
+      if (!renderer.current) return;
       const anisotropy = renderer.current.capabilities.getMaxAnisotropy();
 
       const texturePromises = images.map(async image => {
@@ -137,7 +145,7 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
       setTextures(textures);
 
       requestAnimationFrame(() => {
-        renderer.current.render(scene.current, camera.current);
+        if (renderer.current) renderer.current.render(scene.current, camera.current);
       });
     };
 
@@ -229,7 +237,7 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
 
     const animate = () => {
       animation = requestAnimationFrame(animate);
-      if (animating.current) {
+      if (animating.current && renderer.current) {
         renderer.current.render(scene.current, camera.current);
       }
     };
@@ -277,7 +285,7 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
       uniforms.dispFactor.value = displacementClamp;
 
       requestAnimationFrame(() => {
-        renderer.current.render(scene.current, camera.current);
+        if (renderer.current) renderer.current.render(scene.current, camera.current);
       });
     },
     [canvasRect, imageIndex, images, textures]
