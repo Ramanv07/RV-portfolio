@@ -203,6 +203,14 @@ export default function App() {
     ]
   };
 
+  const siteNameLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Raman Vishwari",
+    "alternateName": ["Ziaftra", "Rahiway", "Prompt Please"],
+    "url": "https://ramanvishwari.ziaftra.in"
+  };
+
   return (
     <html lang="en">
       <head>
@@ -225,6 +233,10 @@ export default function App() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNameLd) }}
         />
       </head>
       <body data-theme={theme}>
