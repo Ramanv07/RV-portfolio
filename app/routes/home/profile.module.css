@@ -57,7 +57,6 @@
 }
 
 .title {
-  white-space: nowrap;
   margin-bottom: var(--spaceL);
   opacity: 0;
   transition: opacity var(--durationXL) ease var(--durationM);

@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://ramanvishwari.ziaftra.in/sitemap.xml

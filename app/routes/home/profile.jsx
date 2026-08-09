@@ -17,7 +17,7 @@ import styles from './profile.module.css';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
-    <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
+    <Heading className={styles.title} data-visible={visible} level={3} as="h2" id={titleId}>
       <DecoderText text="About Raman Vishwari" startText="रमन विश्वारी के बारे में" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
@@ -26,8 +26,8 @@ const ProfileText = ({ visible, titleId }) => (
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       His expertise spans interactive 3D web animations using Three.js, WebGL, and GSAP, cross-platform mobile apps with React Native, and scalable architecture built on solid System Design principles.
     </Text>
-    
-    <Heading className={styles.title} data-visible={visible} level={4} style={{ marginTop: '40px', marginBottom: '16px' }}>
+
+    <Heading className={styles.title} data-visible={visible} level={4} as="h3" style={{ marginTop: '40px', marginBottom: '16px' }}>
       Cross-Platform Mobile Engineering & System Design
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">

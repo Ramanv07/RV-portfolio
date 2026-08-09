@@ -15,6 +15,7 @@ export function baseMeta({
     { title: titleText },
     { name: 'description', content: description },
     { name: 'author', content: name },
+    { name: 'robots', content: 'max-image-preview:large' },
     { property: 'og:image', content: ogImage },
     { property: 'og:image:alt', content: 'Banner for the site' },
     { property: 'og:image:width', content: '1280' },
