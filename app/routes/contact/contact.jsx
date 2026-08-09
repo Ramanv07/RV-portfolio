@@ -130,6 +130,28 @@ export const Contact = () => {
             >
               Send message
             </Button>
+            <div
+              className={styles.contactDetails}
+              data-status={status}
+              style={getDelay(tokens.base.durationL, initDelay)}
+            >
+              <div className={styles.contactItem}>
+                <Icon className={styles.contactIcon} icon="email" />
+                <a href="mailto:ramanvishwari@gmail.com" className={styles.contactLink}>
+                  ramanvishwari@gmail.com
+                </a>
+              </div>
+              <div className={styles.contactItem}>
+                <Icon className={styles.contactIcon} icon="phone" />
+                <a href="tel:+917987367845" className={styles.contactLink}>
+                  +91 7987367845
+                </a>
+              </div>
+              <div className={styles.contactItem}>
+                <Icon className={styles.contactIcon} icon="location" />
+                <span className={styles.contactText}>Bhopal, M.P., India</span>
+              </div>
+            </div>
           </Form>
         )}
       </Transition>

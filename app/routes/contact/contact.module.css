@@ -137,6 +137,72 @@
   }
 }
 
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaceM);
+  margin-top: var(--space3XL);
+  margin-bottom: var(--space2XL);
+  transition-property: opacity;
+  transition-timing-function: var(--bezierFastoutSlowin);
+  transition-duration: var(--durationXL);
+  transition-delay: var(--delay);
+  opacity: 0;
+
+  @media (--mediaUseMotion) {
+    transition-property: transform, opacity;
+    transform: translate3d(0, var(--space3XL), 0);
+  }
+
+  &[data-status='entering'],
+  &[data-status='entered'] {
+    transform: none;
+    opacity: 1;
+  }
+
+  &[data-status='exiting'] {
+    transition-duration: var(--durationM);
+    transition-delay: 0s;
+    opacity: 0;
+
+    @media (--mediaUseMotion) {
+      transform: translate3d(0, calc(var(--space2XL) * -1), 0);
+    }
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spaceM);
+}
+
+.contactIcon {
+  flex: 0 0 auto;
+  fill: var(--colorTextLight);
+}
+
+.contactLink {
+  color: var(--colorTextBody);
+  text-decoration: none;
+  font-size: var(--fontSizeBodyM);
+  font-family: var(--fontStack);
+  line-height: var(--lineHeightBody);
+  transition: color var(--durationS) ease;
+
+  &:hover {
+    color: var(--colorTextTitle);
+    text-decoration: underline;
+  }
+}
+
+.contactText {
+  color: var(--colorTextBody);
+  font-size: var(--fontSizeBodyM);
+  font-family: var(--fontStack);
+  line-height: var(--lineHeightBody);
+}
+
 .botkiller {
   display: none;
 }
