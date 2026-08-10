@@ -42,7 +42,10 @@ export const meta = () => {
     { property: 'og:title', content: 'Raman Vishwari | MERN Full Stack Developer & Founder' },
     { property: 'og:description', content: 'Explore advanced 3D web animation, mobile apps, and full-stack solutions built by Raman Vishwari. Founder of Ziaftra, Rahiway, and Prompt Please.' },
     { property: 'og:type', content: 'profile' },
-    { property: 'og:url', content: 'https://ramanvishwari.ziaftra.in/' }
+    { property: 'og:url', content: 'https://ramanvishwari.ziaftra.in/' },
+    { property: 'og:image', content: 'https://ramanvishwari.ziaftra.in/social-image.png' },
+    { property: 'og:image:width', content: '960' },
+    { property: 'og:image:height', content: '1280' },
   ];
 };
 
