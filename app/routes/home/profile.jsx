@@ -18,24 +18,16 @@ import styles from './profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} as="h2" id={titleId}>
-      <DecoderText text="About Raman Vishwari" startText="रमन विश्वारी के बारे में" start={visible} delay={500} />
+      <DecoderText text="About Me" startText="रमन विश्वारी के बारे में" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Raman Vishwari is a creative MERN Full-Stack Developer and tech entrepreneur based in Bhopal, MP, India. As an MCA scholar at LNCT Bhopal, he specializes in engineering highly performant digital ecosystems—bridging the gap between cutting-edge immersive frontend designs and robust backends.
+      I'm Raman, a MERN Full-Stack Developer and tech entrepreneur based in Bhopal, India. Currently an MCA scholar at LNCT, I love bringing ideas to life—from immersive 3D web experiences using Three.js and GSAP, to fluid cross-platform mobile apps in React Native.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      His expertise spans interactive 3D web animations using Three.js, WebGL, and GSAP, cross-platform mobile apps with React Native, and scalable architecture built on solid System Design principles.
+      Beyond just writing clean code, I care deeply about system design and building products that actually work—whether that means offline-first mobile apps or scalable backends. Lately, I've also been diving into the enterprise world as an SAP enthusiast, learning SAP ABAP and SAP Fiori to build and optimize powerful business solutions.
     </Text>
-
-    <Heading className={styles.title} data-visible={visible} level={4} as="h3" style={{ marginTop: '40px', marginBottom: '16px' }}>
-      Cross-Platform Mobile Engineering & System Design
-    </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      He engineers high-performance, cross-platform mobile applications using React Native, ensuring a native-level experience across iOS and Android platforms. Moving beyond basic layouts, his app development methodology centers around scalable System Design principles—implementing strict state management architectures, offline-first synchronization, and optimized REST/GraphQL data fetching layers. By utilizing native bridges and custom performance tuning, he builds fluid mobile products that seamlessly interact with backend MERN microservices and enterprise cloud ecosystems.
-    </Text>
-
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Driven by a passion for building product-first companies, Raman is the Founder of Ziaftra.in (a hyper-focused design and custom development studio), the creator of Rahiway.online, and the Co-founder of PromptPlease.in. Whether you are looking for an immersive Web3/3D platform or a cloud-ready enterprise integration, Raman and his team can build something incredible.
+      I'm also passionate about building companies. I founded Ziaftra.in, created Rahiway.online, and co-founded PromptPlease.in. Whether it's a 3D web platform or a complex mobile app, I'm always ready to build something incredible.
     </Text>
   </Fragment>
 );
