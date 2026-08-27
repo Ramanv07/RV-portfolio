@@ -99,12 +99,16 @@ export default function App() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Raman Vishwari",
+    "alternateName": "रमन विश्वारी",
     "url": "https://ramanvishwari.ziaftra.in",
+    "image": "https://ramanvishwari.ziaftra.in/raman-vishwari.jpg",
+    "description": "Raman Vishwari is a MERN Full-Stack Developer and tech entrepreneur based in Bhopal, India. MCA scholar at LNCT, founder of Ziaftra.in, creator of Rahiway.online, and co-founder of PromptPlease.in. Specializes in Three.js 3D web animations, React Native mobile apps, SAP ABAP, SAP Fiori, and scalable system design.",
     "jobTitle": "Full-Stack Developer & Tech Entrepreneur",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bhopal",
-      "addressCountry": "India"
+      "addressRegion": "Madhya Pradesh",
+      "addressCountry": "IN"
     },
     "alumniOf": [
       {
@@ -117,16 +121,27 @@ export default function App() {
       }
     ],
     "knowsAbout": [
-      "Web Developer",
-      "Best Web Service Provider",
-      "Web Designer",
-      "Website Banne Bala",
       "MERN Stack",
+      "Full-Stack Web Development",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
       "React Native",
       "Three.js",
       "GSAP",
+      "WebGL",
+      "SAP ABAP",
+      "SAP Fiori",
+      "SAPUI5",
+      "SAP BTP",
       "System Design",
-      "Web3"
+      "REST API",
+      "GraphQL",
+      "Web3",
+      "UI/UX Design",
+      "JavaScript",
+      "TypeScript"
     ],
     "areaServed": [
       "Bhopal, MP",
@@ -144,17 +159,20 @@ export default function App() {
       {
         "@type": "Organization",
         "name": "Ziaftra",
-        "url": "https://ziaftra.in"
+        "url": "https://ziaftra.in",
+        "description": "A hyper-focused design and custom development studio"
       },
       {
         "@type": "Organization",
         "name": "Rahiway",
-        "url": "https://rahiway.online"
+        "url": "https://rahiway.online",
+        "description": "AI-powered project-first collaboration platform for students and developers"
       },
       {
         "@type": "Organization",
         "name": "Prompt Please",
-        "url": "https://promptplease.in"
+        "url": "https://promptplease.in",
+        "description": "AI prompt engineering platform"
       }
     ],
     "sameAs": [
@@ -173,31 +191,31 @@ export default function App() {
         "name": "Who is Raman Vishwari?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Raman Vishwari is a top web developer, web designer, and MERN Full Stack developer based in MP, India. He is an alumnus of LNCT Bhopal and MCBU Chhatarpur, the founder of Rahiway and Ziaftra AI, and co-founder of PromptPlease."
+          "text": "Raman Vishwari is a MERN Full-Stack Developer and tech entrepreneur based in Bhopal, India. He is an MCA scholar at LNCT Bhopal, the founder of Ziaftra.in (a design and development studio), creator of Rahiway.online (an AI collaboration platform), and co-founder of PromptPlease.in. He specializes in Three.js 3D web animations, React Native mobile apps, SAP ABAP, and SAP Fiori."
         }
       },
       {
         "@type": "Question",
-        "name": "Who is the best web service provider and web developer in MP?",
+        "name": "What does Raman Vishwari do?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Raman Vishwari is regarded as the best web developer and service provider serving clients across Bhopal, Indore, Gwalior, Chhatarpur, Khajuraho, Panna, Nowgong, Pune, Delhi, and all over India."
+          "text": "Raman Vishwari builds immersive 3D web experiences using Three.js, GSAP, and WebGL, cross-platform mobile apps with React Native, and scalable backend systems with the MERN stack. He also learns SAP ABAP and SAP Fiori for enterprise business solutions. He is the founder of Ziaftra.in and Rahiway.online."
         }
       },
       {
         "@type": "Question",
-        "name": "Website banne bala ya sabse acha web designer kaun hai?",
+        "name": "What services does Ziaftra offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Bhopal, Chhatarpur, Khajuraho aur poore India me sabse acha website banne bala aur web designer Raman Vishwari (Founder of Ziaftra) hain. Unhe MERN stack aur premium web design me expert knowledge hai."
+          "text": "Ziaftra, founded by Raman Vishwari, offers premium web design, MERN stack full-stack development, React Native mobile app development, 3D web animation, and AI-powered solutions for clients across Bhopal, MP, and all of India."
         }
       },
       {
         "@type": "Question",
-        "name": "What services do Ziaftra Dev and Rahiway offer?",
+        "name": "Where is Raman Vishwari from?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ziaftra AI and Ziaftra Dev, founded by Raman Vishwari, offer premium web design, MERN stack full-stack development, and AI solutions globally and locally in MP, India."
+          "text": "Raman Vishwari is based in Bhopal, Madhya Pradesh, India. He studied at Maharaja Chhatrasal Bundelkhand University (MCBU) in Chhatarpur and is currently pursuing his MCA at Lakshmi Narain College of Technology (LNCT) in Bhopal."
         }
       }
     ]

@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ramanvishwari.ziaftra.in/</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ramanvishwari.ziaftra.in/raman-vishwari.jpg</image:loc>
+      <image:title>Raman Vishwari - MERN Full Stack Developer and Tech Entrepreneur</image:title>
+      <image:caption>Raman Vishwari, MERN Full-Stack Developer and tech entrepreneur based in Bhopal, India. Founder of Ziaftra.in, creator of Rahiway.online, co-founder of PromptPlease.in.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ramanvishwari.ziaftra.in/social-image.png</image:loc>
+      <image:title>Raman Vishwari Portfolio</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://ramanvishwari.ziaftra.in/contact</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ramanvishwari.ziaftra.in/uses</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ramanvishwari.ziaftra.in/services</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ramanvishwari.ziaftra.in/info.html</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>

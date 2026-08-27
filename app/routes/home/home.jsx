@@ -37,15 +37,18 @@ export const meta = () => {
   return [
     ...baseMeta({
       title: 'Full-Stack Developer & Tech Entrepreneur',
-      description: 'Portfolio of Raman Vishwari: Founder of Ziaftra.in & Rahiway.online, Co-founder of PromptPlease.in. MCA student at LNCT Bhopal specializing in MERN Stack, Three.js 3D animation, GSAP, and React Native.',
+      description: 'Raman Vishwari — MERN Full-Stack Developer & Tech Entrepreneur based in Bhopal, India. Founder of Ziaftra.in, creator of Rahiway.online, co-founder of PromptPlease.in. Specializing in Three.js 3D web animation, React Native, SAP ABAP & Fiori.',
     }),
-    { property: 'og:title', content: 'Raman Vishwari | MERN Full Stack Developer & Founder' },
-    { property: 'og:description', content: 'Explore advanced 3D web animation, mobile apps, and full-stack solutions built by Raman Vishwari. Founder of Ziaftra, Rahiway, and Prompt Please.' },
+    { property: 'og:title', content: 'Raman Vishwari | MERN Full Stack Developer & Tech Entrepreneur' },
+    { property: 'og:description', content: 'Raman Vishwari — MERN Full-Stack Developer & tech entrepreneur from Bhopal, India. Founder of Ziaftra.in, creator of Rahiway.online, co-founder of PromptPlease.in. Expert in Three.js, React Native, SAP ABAP & Fiori.' },
     { property: 'og:type', content: 'profile' },
     { property: 'og:url', content: 'https://ramanvishwari.ziaftra.in/' },
     { property: 'og:image', content: 'https://ramanvishwari.ziaftra.in/social-image.png' },
-    { property: 'og:image:width', content: '960' },
-    { property: 'og:image:height', content: '1280' },
+    { property: 'og:image:width', content: '1280' },
+    { property: 'og:image:height', content: '800' },
+    { property: 'profile:first_name', content: 'Raman' },
+    { property: 'profile:last_name', content: 'Vishwari' },
+    { name: 'keywords', content: 'Raman Vishwari, MERN developer, full stack developer Bhopal, Ziaftra, Rahiway, PromptPlease, Three.js developer, React Native developer, SAP ABAP, SAP Fiori, web developer India, tech entrepreneur Bhopal' },
   ];
 };
 
